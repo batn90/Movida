@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    height: 80vh;
+    height: 90vh;
 }
 
 
@@ -27,11 +27,12 @@ main {
 .navbar {
     box-sizing: border-box;
     margin: 0px;
+    padding: 0px 60px;
     width: 100%;
-    height: 20vh;
+    height: 10vh;
     display: inline-flex;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
     border-bottom: 2px solid black;
     position: sticky;
     top: 0;
@@ -40,92 +41,86 @@ main {
     z-index: 1;
 }
 
+.navcontainer {
+    display: inline-flex;
+    height: 100%;
+}
+
+
+
+ul, li {
+    list-style: none;
+    padding: 0;
+}
+
 article {
     margin: 0px 60px;
-
-}
-
-li {
-    list-style: none;
-    padding-left: 0;
-}
-
-.list {
-    display: inline-flex;
-    list-style: none;
-    padding-left: 0;
-}
-
-.list li {
-    margin: 0 30px 0 30px;
-    list-style: none;
-    padding-left: 0;
+    box-sizing: border-box;
+    scroll-margin-top: 10vh; 
 
 }
 
 .btn {
-    border: 2px solid black;
+    display: inline-flex;
+    border-right: 2px solid black;
+    height: 100%;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: larger;
+    color: black;
 }
 
 .btn:hover {
-    border: 2px solid black; 
+    border-right: 2px solid black; 
     background-color: rgba(100, 100, 100, 0.3);
 }
 
+a {
+    text-decoration: none;
+}
 
 .carousel {
+    box-sizing: border-box;
     border: 2px solid black; 
     display: flex;
+    flex-shrink: 0;
     height: 65vh;
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     align-items: center;
     overflow-x: scroll; 
     margin-left: auto;
     margin-right: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+
 }
 
 .slide {
-    height: 100%;
-    width: 90%;
+    display: flex;
     flex-shrink: 0;
-    background-size: cover;
-    margin: 0px 20px;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
     scroll-snap-align: center;
 }
 
-#slide1 {
-    background-image: url(../images/hair-1.jpg);
 
+@media only screen and (max-width: 960px){
+    .slide {
+        width: 100%
+    }
 }
+    
 
-#slide2 {
-    background-image: url(../images/hair-2.jpg);
-
+.slide img {
+    max-width: auto;
+    max-height: 100%;
 }
-
-#slide3 {
-    background-image: url(../images/hair-3.jpg);
-
-}
-
-#slide4 {
-    background-image: url(../images/hair-4.jpg);
-
-}
-
-#slide5 {
-    background-image: url(../images/hair-5.jpg);
-
-}
-
-#slide6 {
-    background-image: url(../images/hair-6.jpg);
-
-}
-
 
 footer {
     box-sizing: border-box;
@@ -133,9 +128,16 @@ footer {
     justify-content:space-between;
     align-items: center;
     width: 100%;
-    height: 25vh;
+    height: 80vh;
     border-top: 2px solid black;
     padding: 20px 30px;
+    margin: 0;
+    background-color:rgba(203, 192, 196, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+h2 {
+    text-align: center;
 }
 
 h4 {
